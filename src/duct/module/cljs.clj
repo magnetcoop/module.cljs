@@ -32,21 +32,21 @@
        :optimizations :advanced}}]}})
 
 (defn- figwheel-config [path main]
-  {:duct.server/figwheel
-   {:css-dirs ^:displace ["resources" "dev/resources"]
-    :builds   ^:displace
-    [{:id           "dev"
-      :figwheel     true
-      :source-paths ["dev/src" "src" ]
-      :build-options
-      {:main       main
-       :output-to  (str path "/js/main.js")
-       :output-dir (str path "/js")
-       :asset-path "/js"
-       :closure-defines {'goog.DEBUG true}
-       :verbose    false
-       :preloads   '[devtools.preload]
-       :optimizations :none}}]}})
+  {:duct.server/figwheel-main
+   {:id "dev"
+    :options {:source-paths ["dev/src" "src"]
+              :main main
+              :output-to (str path "/js/main.js")
+              :output-dir (str path "/js")
+              :asset-path "/js"
+              :closure-defines {'goog.DEBUG true}
+              :verbose false
+              :preloads '[devtools.preload]
+              :optimizations :none}
+    :config {:mode :serve
+             :open-url false
+             :ring-server-options {:port 3449 :host "localhost"}
+             :css-dirs ["resources"]}}})
 
 (defmethod ig/init-key :duct.module/cljs [_ options]
   (fn [config]

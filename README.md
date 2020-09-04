@@ -1,9 +1,12 @@
 # Duct module.cljs
 
-[![Build Status](https://travis-ci.org/duct-framework/module.cljs.svg?branch=master)](https://travis-ci.org/duct-framework/module.cljs)
+[![Build Status](https://travis-ci.org/magnetcoop/module.cljs.svg?branch=master)](https://travis-ci.org/duct-framework/module.cljs)
 
 A [Duct][] module that adds support for compiling ClojureScript for
 production and development.
+
+### Note: Breaking change!
+This fork experimentally uses Figwheel Main. Pay attention to config differences.
 
 [duct]: https://github.com/duct-framework/duct
 
@@ -11,7 +14,7 @@ production and development.
 
 To install, add the following to your project `:dependencies`:
 
-    [duct/module.cljs "0.4.1"]
+    [hydrogen/module.cljs "0.5.0"]
 
 ## Usage
 
@@ -24,16 +27,16 @@ ClojureScript namespace via the `:main` key:
 ```
 
 This sets up the [compiler.cljs][] key for compiling via `lein run
-:duct/compiler`, and the [server.figwheel][] key for dynamically
+:duct/compiler`, and the [server.figwheel-main][] key for dynamically
 reloading ClojureScript files during development when calling
 `(reset)` in the REPL.
 
 [compiler.cljs]:   https://github.com/duct-framework/compiler.cljs
-[server.figwheel]: https://github.com/duct-framework/server.figwheel
+[server.figwheel-main]: https://github.com/magnetcoop/server.figwheel-main
 
 ## License
 
-Copyright © 2019 James Reeves
+Copyright © 2020 Magnet S Coop.
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.

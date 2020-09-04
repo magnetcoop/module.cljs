@@ -1,12 +1,16 @@
-(defproject duct/module.cljs "0.4.1"
+(defproject hydrogen/module.cljs "0.5.0-SNAPSHOT"
   :description "Duct module for developing and compiling ClojureScript"
   :url "https://github.com/duct-framework/module.cljs"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
-  :dependencies [[org.clojure/clojure "1.10.0"]
-                 [org.clojure/clojurescript "1.10.520"]
-                 [binaryage/devtools "0.9.10"]
-                 [duct/core "0.7.0"]
+  :dependencies [[org.clojure/clojure "1.10.1"]
+                 [org.clojure/clojurescript "1.10.773"]
+                 [binaryage/devtools "1.0.2"]
+                 [duct/core "0.8.0"]
                  [duct/compiler.cljs "0.3.0"]
-                 [duct/server.figwheel "0.3.1"]
-                 [integrant "0.7.0"]])
+                 [hydrogen/server.figwheel-main "0.1.0-SNAPSHOT"]
+                 [integrant "0.8.0"]]
+  :profiles {:dev          [:project/dev :profiles/dev]
+             :profiles/dev {}
+             :project/dev  {:plugins [[lein-cljfmt "0.6.7"]
+                                      [jonase/eastwood "0.3.11"]]}})

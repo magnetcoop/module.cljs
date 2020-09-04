@@ -36,19 +36,19 @@
                            :development)]
       (is (= {:duct.core/project-ns 'foo
               :duct.core/environment :development
-              :duct.server/figwheel
-              {:css-dirs ["resources" "dev/resources"]
-               :builds
-               [{:id           "dev"
-                 :figwheel     true
-                 :source-paths ["dev/src" "src"]
-                 :build-options
-                 {:main            'foo.client
-                  :output-to       (absolute-path "target/resources/foo/public/js/main.js")
-                  :output-dir      (absolute-path "target/resources/foo/public/js")
-                  :asset-path      "/js"
-                  :closure-defines {'goog.DEBUG true}
-                  :verbose         false
-                  :preloads        ['devtools.preload]
-                  :optimizations   :none}}]}}
+              :duct.server/figwheel-main
+              {:id "dev"
+               :options {:source-paths ["dev/src" "src"]
+                         :main 'foo.client
+                         :output-to (absolute-path "target/resources/foo/public/js/main.js")
+                         :output-dir (absolute-path "target/resources/foo/public/js")
+                         :asset-path "/js"
+                         :closure-defines {'goog.DEBUG true}
+                         :verbose false
+                         :preloads '[devtools.preload]
+                         :optimizations :none}
+               :config {:mode :serve
+                        :open-url false
+                        :ring-server-options {:port 3449 :host "localhost"}
+                        :css-dirs ["resources"]}}}
              (core/build-config config))))))
