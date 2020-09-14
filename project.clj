@@ -1,4 +1,4 @@
-(defproject hydrogen/module.cljs "0.5.0-SNAPSHOT"
+(defproject hydrogen/module.cljs "0.5.0"
   :description "Duct module for developing and compiling ClojureScript"
   :url "https://github.com/duct-framework/module.cljs"
   :license {:name "Eclipse Public License"
@@ -10,6 +10,14 @@
                  [duct/compiler.cljs "0.3.0"]
                  [hydrogen/server.figwheel-main "0.1.1"]
                  [integrant "0.8.0"]]
+  :deploy-repositories [["snapshots" {:url "https://clojars.org/repo"
+                                      :username :env/clojars_username
+                                      :password :env/clojars_password
+                                      :sign-releases false}]
+                        ["releases"  {:url "https://clojars.org/repo"
+                                      :username :env/clojars_username
+                                      :password :env/clojars_password
+                                      :sign-releases false}]]
   :profiles {:dev          [:project/dev :profiles/dev]
              :profiles/dev {}
              :project/dev  {:plugins [[lein-cljfmt "0.6.7"]
