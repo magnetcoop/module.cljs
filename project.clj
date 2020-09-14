@@ -8,7 +8,7 @@
                  [binaryage/devtools "1.0.2"]
                  [duct/core "0.8.0"]
                  [duct/compiler.cljs "0.3.0"]
-                 [hydrogen/server.figwheel-main "0.1.0-SNAPSHOT"]
+                 [hydrogen/server.figwheel-main "0.1.1"]
                  [integrant "0.8.0"]]
   :profiles {:dev          [:project/dev :profiles/dev]
              :profiles/dev {}
