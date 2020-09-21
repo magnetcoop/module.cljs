@@ -32,7 +32,7 @@
        :optimizations :advanced}}]}})
 
 (defn- figwheel-config [path main]
-  {:duct.server/figwheel-main
+  {:duct.server/figwheel-main ^:displace
    {:id "dev"
     :options {:source-paths ["dev/src" "src"]
               :main main
