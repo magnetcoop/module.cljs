@@ -1,4 +1,4 @@
-(defproject hydrogen/module.cljs "0.5.2"
+(defproject hydrogen/module.cljs "0.5.3-SNAPSHOT"
   :description "Duct module for developing and compiling ClojureScript"
   :url "https://github.com/duct-framework/module.cljs"
   :license {:name "Eclipse Public License"
