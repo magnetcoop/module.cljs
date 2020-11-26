@@ -1,6 +1,7 @@
 # Duct module.cljs
 
-[![Build Status](https://travis-ci.org/magnetcoop/module.cljs.svg?branch=master)](https://travis-ci.org/duct-framework/module.cljs)
+[![Clojars Project](https://img.shields.io/clojars/v/hydrogen/module.cljs.svg)](https://clojars.org/hydrogen/module.cljs)
+[![Build Status](https://travis-ci.com/magnetcoop/module.cljs.svg?branch=master)](https://travis-ci.com/magnetcoop/module.cljs)
 
 A [Duct][] module that adds support for compiling ClojureScript for
 production and development.
@@ -14,7 +15,7 @@ This fork experimentally uses Figwheel Main. Pay attention to config differences
 
 To install, add the following to your project `:dependencies`:
 
-    [hydrogen/module.cljs "0.5.0"]
+[![Clojars Project](https://clojars.org/hydrogen/module.cljs/latest-version.svg)](https://clojars.org/hydrogen/module.cljs)
 
 ## Usage
 
