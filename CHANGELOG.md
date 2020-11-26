@@ -5,7 +5,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
-No unreleased changes at this point.
+- Upgrade to latest version of hydrogen/server.figwheel-main
 
 ## [0.5.1]
 
